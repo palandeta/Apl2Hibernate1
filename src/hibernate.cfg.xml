@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hibernate-configuration>
+<session-factory>
+	<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+	<property name="hibernate.connection.url">jdbc:mysql://localhost:3306/apiihibernate</property>
+	<property name="hibernate.connection.username">andres</property>
+	<property name="hibernate.connection.password">andres</property>
+	<property name="hibernate.connection.pool_size">10</property>
+	<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+	<!--Drop and re-create the database schema on startup. So that we don't need to create the ...-->
+	<property name="hbm2ddl.auto">create</property>
+	<!-- para que muestre en la consola el query sql que esta procesando en algun instante-->
+	<property name="show_sql">true</property>
+	<!-- Usamos la clase dentro del paquete \, Hibernate creara la tabla -->
+	<mapping class="codigo.Usuario"/>
+</session-factory>	
+</hibernate-configuration>
